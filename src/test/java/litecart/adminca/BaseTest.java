@@ -17,9 +17,11 @@ public class BaseTest {
     }
     public WebDriver setup(String browser){
         if(browser.equals("chrome")) {
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver");
             driver = new ChromeDriver();
         }
         else if(browser.equals("firefox")) {
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/driver/geckodriver");
             driver = new FirefoxDriver();
         }
         return driver;
