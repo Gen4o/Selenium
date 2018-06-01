@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke" parallel="tests" thread-count="4">
+    <test name="testSmoke">
+        <parameter name="browser" value="chrome"></parameter>
+        <groups>
+            <define name="login"></define>
+            <define name="alert"></define>
+            <define name="dataproviders"></define>
+            <run>
+                <exclude name="dataproviders"></exclude>
+                <include name="alert"></include>
+                <include name="login"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="litecart.adminca.TestLitecartAdmin"></class>
+            <class name="litecart.adminca.MainPageTest"></class>
+        </classes>
+    </test>
+
+    <test name="regress">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+        <class name="litecart.adminca.TestLitecartAdmin"></class>
+    </classes>
+    </test>
+</suite>
