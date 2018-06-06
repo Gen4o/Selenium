@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke" parallel="tests" thread-count="4">
+    <test name="testRegression">
+        <parameter name="browser" value="chrome"></parameter>
+
+        <classes>
+            <class name="litecart.adminca.TestLitecartAdmin"></class>
+            <class name="litecart.adminca.MainPageTest"></class>
+        </classes>
+    </test>
+
+    <test name="regress">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="litecart.adminca.TestLitecartAdmin"></class>
+            <class name="litecart.adminca.MainPageTest"></class>
+        </classes>
+    </test>
+</suite>
