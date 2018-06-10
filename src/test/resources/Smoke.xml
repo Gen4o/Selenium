@@ -18,10 +18,10 @@
         </classes>
     </test>
 
-    <test name="regress">
+    <!--<test name="regress">
         <parameter name="browser" value="firefox"></parameter>
         <classes>
         <class name="litecart.adminca.TestLitecartAdmin"></class>
     </classes>
-    </test>
+    </test>-->
 </suite>
